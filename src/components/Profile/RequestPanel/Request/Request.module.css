@@ -1,0 +1,39 @@
+.request .header{
+    display: flex;
+    flex-direction: row;
+}
+.request .header>div:nth-child(1){
+    padding: 5px;
+    font-weight: bold;
+}
+.request .header>div:nth-child(2){
+    padding: 5px;
+    color: gray;
+}
+.request .content{
+    position: relative;
+    background-color: #F2FBFF;
+    border: 1px solid #C4CBCF;
+    padding: 20px;
+    box-shadow: 0px 0px 5px gray;
+}
+.request .content::after{
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 99px;
+    top: -10px; /* Положение треугольника */
+    border: 5px solid transparent; /* Прозрачные границы */
+    border-bottom: 5px solid #F2FBFF;
+    border-left: 5px solid #F2FBFF;
+
+}
+.request .content::before{
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 100px;
+    top: -11px; /* Положение треугольника */
+
+    border: 5px solid transparent; /* Прозрачные границы */
+    border-bottom: 5px solid #C4CBCF;
+    border-left: 5px solid #C4CBCF;
+}

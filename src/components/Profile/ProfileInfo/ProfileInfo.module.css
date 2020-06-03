@@ -1,12 +1,24 @@
+.userImage>img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.baseInfo{
+    padding: 20px;
+}
+.status{
+    color: darkgray;
+    padding: 5px 0px;
+}
+.nameString{
+    font-weight: bold;
+    padding: 5px 0px;
+}
+@media screen and (min-width: 600px){
 .content {
     position: relative;
     display: flex;
     flex-direction: row;
-}
-.userImage>img{
-   width: 200px;
-    height: 200px;
-    border-radius: 50%;
 }
 .aboutService{
     position: absolute;
@@ -19,14 +31,20 @@
     border: 1px solid #DADADA;
     z-index: -1;
 }
-.baseInfo{
-    padding: 20px;
 }
-.nameString{
-    font-weight: bold;
-    padding: 5px 0px;
-}
-.status{
-    color: darkgray;
-    padding: 5px 0px;
+@media screen and (max-width: 600px){
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutService{
+        position: relative;
+        left: 0px;
+        bottom: 20px;
+        padding: 20px;
+        background-color: #FFFBC8;
+        border-radius: 10px;
+        border: 1px solid #DADADA;
+    }
 }

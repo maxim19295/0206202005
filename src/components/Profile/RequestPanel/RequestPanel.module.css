@@ -1,0 +1,64 @@
+.panelHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.states span{
+    color: lightskyblue;
+}
+.panelHeader>div{
+    display: flex;
+    flex-direction: row;
+}
+.panelHeader>div>div{
+    padding: 5px;
+}
+.lastRequests{
+    font-weight: bold;
+}
+.allRequests{
+    text-decoration: underline;
+    color: blue;
+}
+
+.newRequest{
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newRequest>div{
+    padding: 20px;
+}
+.newRequest textarea{
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    resize: none;
+}
+.newRequest button{
+    width: 50%;
+    border-radius: 50px;
+    background-color: #FDD639;
+    padding: 20px;
+    border: none;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0 auto;
+    display: block;
+}
+.newRequest button:disabled{
+    width: 50%;
+    border-radius: 50px;
+    background-color: #a3a3a3;
+    color: white;
+    padding: 20px;
+    border: none;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0 auto;
+    display: block;
+}

@@ -35,8 +35,14 @@ const styleCreator = (percent) =>{
         }
     }
 }
-export const ServiceList = () =>(
-    <div className={sl.serviceList}>
+export const ServiceList = (props) => {
+    let general_quantity = 0;
+    for(let i=0;i<props.services.length;i++){
+        if(props.services[i].quantity){
+            general_quantity+=props.services[i].quantity;
+        }
+    }
+    return <div className={sl.serviceList}>
         <div>
             <div>
 
@@ -46,22 +52,18 @@ export const ServiceList = () =>(
             </div>
         </div>
         <hr/>
-        <div>
-            <div><p>Ручное бронирование</p><div style={styleCreator(80)}></div></div>
-            <div>11</div>
-        </div>
-        <div>
-            <div><p>Пакетные туры</p><div style={styleCreator(30)}></div></div>
-            <div>3</div>
-        </div>
-        <div>
-            <div><p>Отели</p><div style={styleCreator(10)}></div></div>
-            <div>1</div>
-        </div>
+        {
+            props.services.map(el => <div>
+                <div><p>{el.name}</p>
+                    <div style={styleCreator(Math.round(+(el.quantity)/general_quantity*100))}></div>
+                </div>
+                <div>{el.quantity}</div>
+            </div>)
+        }
         <hr/>
         <div>
             <div style={{fontWeight: 'bold'}}>Всего</div>
             <div>15</div>
         </div>
     </div>
-);
+};

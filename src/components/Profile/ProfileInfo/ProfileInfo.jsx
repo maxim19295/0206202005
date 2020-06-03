@@ -1,12 +1,11 @@
 import React from "react";
-import exampleImage from '../../../assets/example';
 import p from './ProfileInfo.module.css';
-export const ProfileInfo = () =>(
+export const ProfileInfo = (props) =>(
     <div className={p.content}>
-        <div className={p.userImage}><img src={exampleImage} alt='example'/></div>
+        <div className={p.userImage}><img src={props.photo} alt='example'/></div>
         <div className={p.baseInfo}>
-            <div className={p.nameString}>Name Surname</div>
-            <div className={p.status}>Status</div>
+            <div className={p.nameString}>{props.name} {props.surname}</div>
+            <div className={p.status}>{props.specialization}</div>
         </div>
-        <div className={p.aboutService}>Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны</div>
+        <div className={p.aboutService}>{props.about}</div>
     </div>);

@@ -1,5 +1,12 @@
-.serviceList{
-    margin-left: 220px;
+@media screen and (min-width: 600px) {
+    .serviceList {
+        margin-left: 220px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .serviceList {
+        margin-left: 0px;
+    }
 }
 .serviceList p{
     margin: 0px;
