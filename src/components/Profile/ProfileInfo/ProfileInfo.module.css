@@ -24,7 +24,9 @@
 }
 .nameString{
     font-weight: bold;
+    padding: 5px 0px;
 }
 .status{
     color: darkgray;
+    padding: 5px 0px;
 }
