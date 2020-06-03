@@ -1,0 +1,30 @@
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.userImage>img{
+   width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.aboutService{
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    padding: 20px;
+    padding-left: 120px;
+    background-color: #FFFBC8;
+    border-radius: 10px;
+    border: 1px solid #DADADA;
+    z-index: -1;
+}
+.baseInfo{
+    padding: 20px;
+}
+.nameString{
+    font-weight: bold;
+}
+.status{
+    color: darkgray;
+}
